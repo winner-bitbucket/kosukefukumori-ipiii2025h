@@ -7,7 +7,7 @@
 
 /* このプログラムはブランチを分けてから個々に作成してください */
 
-// このファイルは 33aa AAAAA が記述
+// このファイルは 33aa AAAAA が3記述
 
 int main() {
     printf("Hello, world.\n");
