@@ -1,10 +1,15 @@
 #ifndef __COMPLEX_H__
 #define __COMPLEX_H__
-
+#include <stdio.h>
+#include <math.h>
+//////////////////////////////////////////////////////////////////////////////////////////
 // 二重読み込みを防ぐために、complex 構造体の定義などはここに記述
 
 // ↓↓↓↓ complex の定義 by 33aa AAAA
-
+typedef struct {
+    double real;   // 実部
+    double image;  // 虚部
+} complex;
 //↑↑↑↑ ここまでを 33aa AAAA が記述
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -30,6 +35,7 @@ complex conjComp(complex a);                    //共役複素数
 
 complex invComp(complex a);                     //逆数  
 complex divComp(complex a, complex b);          //除算
+double getR(complex a);                         //実数値
 double getTheta(complex a);                     //なす角(radian)
 void printComp(complex a);                      //表示
 void printCompRT(complex a);                    //極形式で表示
