@@ -1,9 +1,13 @@
 #include <math.h>
 #include <stdio.h>
+#include "complex.h"
+#include "complex.c"
+
 
 // 複素数構造体を使う時には次の行を活かす
 // #include "complex.h"
 #include "testCommon.h"
+#include "testCommon.c"
 
 // 各自の場所に記載してください。順番が違ってもテストには問題ないので気にしないでください。
 
@@ -44,6 +48,20 @@ void testThird() {
 
 // ここから main の始まりまでは追加・変更しないでください。
 
+
+void testMakeComp() {
+    complex ans;
+    testStart("makeComp");
+    // 1+2jを作成
+    ans = makeComp(1.0, 2.0);
+    assertEqualsDouble(ans.real, 1.0);
+    assertEqualsDouble(ans.image, 2.0);
+    // 3.4+5.6jを作成
+    ans = makeComp(3.4, 5.6);
+    assertEqualsDouble(ans.real, 3.4);
+    assertEqualsDouble(ans.image, 5.6);
+}
+
 /* main関数の記述部 */
 int main() {
     // ↓↓↓↓ 33xx XXXX 記述部(この範囲以外には追加しない)
@@ -63,7 +81,7 @@ int main() {
     // ↑↑↑↑ ここまでを 33zz ZZZZ が記述(この範囲以外には追加しない)
 
     // ここから下は追加・変更しないでください。
-
+    testMakeComp();
     testErrorCheck();  // これは消さないこと
     return 0;
 }
