@@ -73,7 +73,7 @@ void testMakeCompRT() {
     assertEqualsComplex(ans, makeComp(0,2.0));
     // 1∠(-π/4)
     ans = makeCompRT(1.0, -M_PI/4.0);
-    assertEqualsComplex(ans, makeComp(, ___));
+    assertEqualsComplex(ans, makeComp(1.0/sqrt(2.0),-1.0/sqrt(2.0)));
 }
 
 /* main関数の記述部 */

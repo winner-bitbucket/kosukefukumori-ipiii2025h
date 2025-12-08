@@ -20,8 +20,9 @@ complex makeComp(double real, double image) {
 
 complex makeCompRT(double r, double theta) {
     complex result;
-    double real = r * cos(theta);
-    double image = r * sin(theta);
+    result.real = r * cos(theta);
+    result.image = r * sin(theta);
+    return result;
 }
 
 complex addComp(complex a, complex b) {
