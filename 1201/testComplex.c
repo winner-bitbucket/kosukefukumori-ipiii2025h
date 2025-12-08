@@ -76,6 +76,49 @@ void testMakeCompRT() {
     assertEqualsComplex(ans, makeComp(1.0/sqrt(2.0),-1.0/sqrt(2.0)));
 }
 
+void testaddComp(){
+    complex ans[2];
+    ans[0] = makeComp(2.0, 3.0);
+    ans[1] = makeComp(2.0, 3.0);
+    complex anss = addComp(ans[0], ans[1]);
+    assertEqualsDouble(anss.real, 4.0);
+    assertEqualsDouble(anss.image, 6.0);
+}
+
+void testsubComp(){
+    complex ans[2];
+    ans[0] = makeComp(4.0, 5.0);
+    ans[1] = makeComp(2.0, 3.0);
+    complex anss = subComp(ans[0], ans[1]);
+    assertEqualsDouble(anss.real, 2.0);
+    assertEqualsDouble(anss.image, 2.0);
+}
+
+void testcmulComp(){
+    complex ans;
+    ans = makeComp(2.0, 3.0);
+    ans = cmulComp(ans, 4);
+    assertEqualsDouble(ans.real, 8.0);
+    assertEqualsDouble(ans.image, 12.0);
+}
+
+void testmulComp(){
+    complex ans[2];
+    ans[0] = makeComp(4.0, 5.0);
+    ans[1] = makeComp(2.0, 3.0);
+    complex anss = mulComp(ans[0], ans[1]);
+    assertEqualsDouble(anss.real, -7.0);
+    assertEqualsDouble(anss.image, 22.0);
+}
+
+
+void testgetR2(){
+    double ans;
+    complex anss = makeComp(2.0, 3.0);
+    ans = getR2(anss);
+    assertEqualsDouble(ans, 13.0);
+
+}
 /* main関数の記述部 */
 int main() {
     // ↓↓↓↓ 33xx XXXX 記述部(この範囲以外には追加しない)
@@ -97,6 +140,11 @@ int main() {
     // ここから下は追加・変更しないでください。
     testMakeComp();
     testMakeCompRT();
+    testaddComp();
+    testsubComp();
+    testcmulComp();
+    testmulComp();
+    testgetR2();
     testErrorCheck();  // これは消さないこと
     return 0;
 }
