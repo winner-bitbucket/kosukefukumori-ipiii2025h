@@ -62,6 +62,20 @@ void testMakeComp() {
     assertEqualsDouble(ans.image, 5.6);
 }
 
+void testMakeCompRT() {
+    complex  ans;
+    testStart("makeCompRT");
+    // 3∠0
+    ans = makeCompRT(3.0, 0);
+    assertEqualsComplex(ans, makeComp(3.0,0));
+    // 2∠π/2
+    ans = makeCompRT(2.0, M_PI/2.0);
+    assertEqualsComplex(ans, makeComp(0,2.0));
+    // 1∠(-π/4)
+    ans = makeCompRT(1.0, -M_PI/4.0);
+    assertEqualsComplex(ans, makeComp(, ___));
+}
+
 /* main関数の記述部 */
 int main() {
     // ↓↓↓↓ 33xx XXXX 記述部(この範囲以外には追加しない)
@@ -82,6 +96,7 @@ int main() {
 
     // ここから下は追加・変更しないでください。
     testMakeComp();
+    testMakeCompRT();
     testErrorCheck();  // これは消さないこと
     return 0;
 }
