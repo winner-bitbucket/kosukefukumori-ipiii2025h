@@ -106,7 +106,7 @@ void printComp(complex a) {
 void printCompRT(complex a) {
     double r = getR(a);
     double theta = getTheta(a) * (180 / M_PI); // ラジアンを度に変換
-    printf("r: %.2f, θ: %.2f radians\n", r, theta);
+    printf("r: %.2f, θ: %.2f degree\n", r, theta);
 }
 //↑↑↑↑ ここまでを 33yy YYYY が記述(この範囲以外には追加しない)
 

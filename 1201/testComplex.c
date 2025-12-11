@@ -119,6 +119,60 @@ void testgetR2(){
     assertEqualsDouble(ans, 13.0);
 
 }
+
+void testconjComp(){
+    complex ans;
+    ans = makeComp(2.0, 3.0);
+    ans = conjComp(ans);
+    assertEqualsDouble(ans.real, 2.0);
+    assertEqualsDouble(ans.image, -3.0);
+}
+
+void testinvComp(){
+    complex ans;
+    ans = makeComp(2.0, 3.0);
+    ans = invComp(ans);
+    assertEqualsDouble(ans.real, (double)2/13);
+    assertEqualsDouble(ans.image, (double)-3/13);
+}
+
+void testdivComp(){
+    complex ans1;
+    complex ans2;
+    complex r;
+    ans1 = makeComp(3.0, 4.0);
+    ans2 = makeComp(5.0, 3.0);
+    r = divComp(ans1, ans2);
+    assertEqualsDouble(r.real, (double)27/34);
+    assertEqualsDouble(r.image, (double)11/34);
+}
+
+void testgetR(){
+    double ans;
+    complex anss;
+    anss = makeComp(3.0, 4.0);
+    ans = getR(anss);
+    assertEqualsDouble(ans, 5.0);
+}
+
+void testgetTheta(){
+    complex ans;
+    ans = makeComp(2.0, 2.0);
+    double anss = getTheta(ans);
+    assertEqualsDouble(anss, M_PI/4);
+}
+
+void testprintComp(){
+    complex ans;
+    ans = makeComp(3.0, 7.0);
+    printComp(ans); 
+}
+void testprintCompRT(){
+    complex ans;
+    ans = makeComp(2.0, 4.0);
+    printCompRT(ans);
+}
+
 /* main関数の記述部 */
 int main() {
     // ↓↓↓↓ 33xx XXXX 記述部(この範囲以外には追加しない)
@@ -145,6 +199,13 @@ int main() {
     testcmulComp();
     testmulComp();
     testgetR2();
+    testconjComp();
+    testinvComp();
+    testdivComp();
+    testgetR();
+    testgetTheta();
+    testprintComp();
+    testprintCompRT();
     testErrorCheck();  // これは消さないこと
     return 0;
 }
