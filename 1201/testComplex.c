@@ -210,6 +210,15 @@ void testgetTheta(){
     ans = makeComp((double)1/2, sqrt(3)/2);
     anss = getTheta(ans);
     assertEqualsDouble(anss, M_PI/3);
+    ans = makeComp((double)-1.0, 1.0);
+    anss = getTheta(ans);
+    assertEqualsDouble(anss, 3 * M_PI/4);
+    ans = makeComp((double)-1/2, -sqrt(3)/2);
+    anss = getTheta(ans);
+    assertEqualsDouble(anss, -2 * M_PI/3);
+    ans = makeComp(sqrt(3)/2, (double)-1/2);
+    anss = getTheta(ans);
+    assertEqualsDouble(anss, -M_PI/6);
 }
 
 void testprintComp(){

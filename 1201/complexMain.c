@@ -12,7 +12,7 @@
 int main() {
     complex a, b, c;
     a = makeComp(1.0, 2.0);  // 1
-    //  b = makeComp(3.0, 4.0);  // 3 + 4j
+    //b = makeComp(3.0, 4.0);  // 3 + 4j
     c = addComp(a, b);       // c = a + b
     b = makeCompRT(5.0, (2/3)*M_PI); // b = 5∠3π
     printComp(a);
