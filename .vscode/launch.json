@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/brave/Desktop/3300-program_2/C/koki/1201",
-      "program": "c:/Users/brave/Desktop/3300-program_2/C/koki/1201/build/Debug/outDebug",
+      "cwd": "c:/Users/brave/Desktop/3300-program_2/C/koki",
+      "program": "c:/Users/brave/Desktop/3300-program_2/C/koki/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
